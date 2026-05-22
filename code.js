@@ -7,8 +7,6 @@ export function capitalize(string) {
     .join(" ");
 }
 
-// console.log(capitalize("kinth"));
-
 export function reverseString(string) {
   return string.split("").reverse().join("");
 }
@@ -19,19 +17,6 @@ export const calculator = {
   divide: (a, b) => a / b,
   multiply: (a, b) => a * b,
 };
-
-export function analyzeArray(array) {
-  const max = Math.max(...array);
-  const min = Math.min(...array);
-  const length = array.length;
-  const average = array.reduce((a, b) => a + b, 0) / length;
-  return {
-    average,
-    min,
-    max,
-    length,
-  };
-}
 
 export function caesarCipher(string, num) {
   const shift = num % 26;
@@ -63,4 +48,17 @@ export function caesarCipher(string, num) {
     .join(" ");
 
   return result;
+}
+
+export function analyzeArray(array) {
+  const max = Math.max(...array);
+  const min = Math.min(...array);
+  const length = array.length;
+  const average = array.reduce((a, b) => a + b, 0) / length;
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
 }
