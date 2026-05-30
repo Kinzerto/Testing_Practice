@@ -25,10 +25,10 @@ export function caesarCipher(string, num) {
   const combined = [...letters.slice(shift), ...letters.slice(0, shift)];
 
   const result = string
-    .split(" ")
+    .split(" ")// if words are two or more split into a array
     .map((word) => {
       const partialResult = word
-        .split("") // if words are two or more split into a array
+        .split("") 
         //check for lettercase and punctuations
         .map((char) => {
           if (uppercase.includes(char)) {
